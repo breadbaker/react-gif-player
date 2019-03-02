@@ -64,6 +64,9 @@ class GifPlayerContainer extends React.Component {
     if (typeof this.props.pauseRef === 'function') {
       this.props.pauseRef(() => this.setState({ playing: false }));
     }
+    if (typeof this.props.startPlay === 'function') {
+      this.props.startPlay(() => this.setState({ playing: true }));
+    }
     this.updateImages();
   }
 
